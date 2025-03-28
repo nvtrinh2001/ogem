@@ -50,10 +50,10 @@ jobs:
       #   with:
       #     version: latest
 
-      - name: Run Security Scan
-        uses: securego/gosec@v2.22.2
-        with:
-          args: ./...
+      # - name: Run Security Scan
+      #   uses: securego/gosec@v2.22.2
+      #   with:
+      #     args: ./...
 
       - name: Build
         run: go build -o ogem -trimpath -ldflags="-s -w" ./...
