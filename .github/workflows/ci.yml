@@ -56,7 +56,7 @@ jobs:
       #     args: ./...
 
       - name: Build
-        run: go build -o ogem -trimpath -ldflags="-s -w" ./...
+        run: go build -o ogem -trimpath -ldflags="-s -w" ./cmd/ogem
 
       - name: Run Tests in Parallel
         run: go test -v -p=8 -race -coverprofile=coverage.out -json > test-results.json
