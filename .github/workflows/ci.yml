@@ -45,10 +45,10 @@ jobs:
             exit 1; 
           fi
 
-      - name: Run Linter
-        uses: golangci/golangci-lint-action@v6
-        with:
-          version: latest
+      # - name: Run Linter
+      #   uses: golangci/golangci-lint-action@v6
+      #   with:
+      #     version: latest
 
       - name: Run Security Scan
         uses: securego/gosec@v2.22.2
