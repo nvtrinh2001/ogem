@@ -11,7 +11,7 @@ import (
 
 func TestToGeminiRole(t *testing.T) {
 	tests := []struct {
-		role string
+		role     string
 		expected string
 	}{
 		{"user", "user"},
@@ -78,15 +78,15 @@ func TestToGeminiResponseMimeType_SuccessCases(t *testing.T) {
 
 func TestToGeminiResponseMimeType_ErrorCases(t *testing.T) {
 	tests := []struct {
-		name string
-		format *openai.ChatCompletionRequest
+		name          string
+		format        *openai.ChatCompletionRequest
 		expectedError string
 	}{
 		{
 			name: "missing json schema in json_schema response format",
 			format: &openai.ChatCompletionRequest{
 				ResponseFormat: &openai.ResponseFormat{
-					Type: "json_schema",
+					Type:       "json_schema",
 					JsonSchema: nil,
 				},
 			},
